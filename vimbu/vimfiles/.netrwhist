@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='C:/Program Files (x86)/Vim'
+let g:netrw_dirhist_2='C:/Users/Zelenenky/Desktop/scripts0706'
+let g:netrw_dirhist_3='C:/Users/Zelenenky/Desktop'
+let g:netrw_dirhist_4='C:/Users/Zelenenky/Desktop/wp-install-vps-0720'
+let g:netrw_dirhist_5='C:/Program Files (x86)/Vim'
+let g:netrw_dirhist_6='C:/Users/Zelenenky/Desktop/wp-install-vps-0720'
