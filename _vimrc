@@ -17,11 +17,22 @@ set lines=57
 set columns=100
 "line numbers
 "set numbers
+
 "Write the old file out when switching between files.
 set autowrite
 
+"Backspace all line.
+set backspace=indent,eol,start
+
+"Default flag for substitution
+set gdefault
+
 "Display current cursor position in lower right corner.
 set ruler
+
+"Cursor line ruler
+set cursorline
+
 "Adding abreviations
 "Want a different map leader than \
 "set mapleader = ",";
@@ -30,15 +41,24 @@ set ruler
 "the timeout.
 set timeoutlen=700
 
+"Line ends charater
+set list 
+set listchars=eol:¬
+
+"Rip out swap file
+set noswapfile
+
 "Switch between buffers without saving
 set hidden
 
 "Set the color scheme. Change this to your preference. 
 "Here's 100 to choose from: http://www.vim.org/scripts/script.php?script_id=625
-colorscheme morning 
+colorscheme Chela_light 
 
+"Color column
+set colorcolumn=80
 "Set font type and size. Depends on the resolution. Larger screens, prefer h15
-set guifont=Monaco:h15
+set guifont=Courier\ New:h12
 
 "Tab stuff
 set tabstop=3
@@ -58,6 +78,10 @@ set number
 "Indent stuff
 set smartindent
 set autoindent
+
+"Force encode
+set fileencoding=utf-8
+set encoding=utf-8
 
 "Always show the status line
 set laststatus=2
@@ -201,23 +225,10 @@ iab llorem Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius
 iab teh the
 iab Teh The
 
-"--------------------------"
-" PERSONAL SETTINGS 
-" -------------------------"
-"Example for adding abbreviations - triggered by the spacebar.
-"iabbrev mysite ftp://jeff-way.com@jeffrey-way.com/domains/
-
-"Shortcut for logging into my server
-"nmap ,server :Nread ftp://jeff-way.com@jeffrey-way.com/domains/<cr>
-
-"Shortcut directly to my theme files on server
-"nmap ,theme :Nread ftp://jeff-way.com@jeffrey-way.com/domains/jeffrey-way.com/html/wp-content/themes/magazineJW/<cr>
-
-"For autocompletion of Snipmate plugin
-"let g:acp_behaviorSnipmateLength = 1
-
 "Peep open
 if has("gui_macvim")
    macmenu &File.New\ Tab key=<nop>
    map <c-o> <Plug>PeepOpen
 end
+"Auto php
+"au BufRead, BufNewFile *.php setfiletype php
