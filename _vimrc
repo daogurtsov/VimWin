@@ -9,6 +9,9 @@ set nocompatible
 "Enable filetypes
 filetype on
 filetype plugin on
+"Pathogen
+"call pathogen#infect()
+ 
 filetype indent on
 syntax on
 "length
@@ -40,10 +43,6 @@ set cursorline
 "Ever notice a slight lag after typing the leader key + command? This lowers
 "the timeout.
 set timeoutlen=700
-
-"Line ends charater
-set list 
-set listchars=eol:¬
 
 "Rip out swap file
 set noswapfile
@@ -232,3 +231,13 @@ if has("gui_macvim")
 end
 "Auto php
 "au BufRead, BufNewFile *.php setfiletype php
+
+"Line ends charater
+" set list 
+set listchars=eol:¬
+"Autocomplete navigation
+imap <Tab> <C-n>
+imap <S-Tab> <C-p>
+"Set folding method and marker
+set fdm=marker
+set foldmarker=[[,]]
