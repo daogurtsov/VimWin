@@ -52,12 +52,12 @@ set hidden
 
 "Set the color scheme. Change this to your preference. 
 "Here's 100 to choose from: http://www.vim.org/scripts/script.php?script_id=625
-colorscheme Chela_light 
+colorscheme molokai 
 
 "Color column
 set colorcolumn=80
 "Set font type and size. Depends on the resolution. Larger screens, prefer h15
-set guifont=Courier\ New:h12
+set guifont=Courier\ New:h11
 
 "Tab stuff
 set tabstop=3
@@ -150,6 +150,9 @@ nmap ,ev :tabedit $MYVIMRC<cr>
 "Change zen coding plugin expansion key to shift + e
 let g:user_zen_expandabbr_key = '<c-z>'
 
+"open php tag"
+map ,p <i<?php>
+
 "Faster shortcut for commenting. Requires T-Comment plugin
 map ,c <c-_><c-_>
 
@@ -235,9 +238,11 @@ end
 "Line ends charater
 " set list 
 set listchars=eol:¬
+
 "Autocomplete navigation
 imap <Tab> <C-n>
 imap <S-Tab> <C-p>
+
 "Set folding method and marker
 set fdm=marker
 set foldmarker=[[,]]
